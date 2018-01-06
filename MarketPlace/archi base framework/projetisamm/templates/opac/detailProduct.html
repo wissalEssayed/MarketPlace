@@ -1,0 +1,491 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MarketPlace</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Electronic Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- Custom Theme files -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<!-- <script src="src/bootstrap-rating-input.js"></script> -->
+<script src="{{STATIC_URL}}js/bootstrap-rating-input.min.js"></script>
+<link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{STATIC_URL}}css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{STATIC_URL}}css/fasthover.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{STATIC_URL}}css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="{{STATIC_URL}}css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="{{STATIC_URL}}js/jquery.min.js"></script>
+<link rel="stylesheet" href="{{STATIC_URL}}css/jquery.countdown.css" /> <!-- countdown --> 
+<!-- //js -->  
+<!-- web fonts --> 
+<link href='{{STATIC_URL}}fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
+<link href='{{STATIC_URL}}fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- //web fonts -->  
+<!-- start-smooth-scrolling -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<style>
+	.icon-d {
+	    color: yellow;
+	    -webkit-text-stroke-width: 0.5px;
+	    -webkit-text-stroke-color:  #888;
+}
+</style>
+<!-- //end-smooth-scrolling --> 
+</head> 
+<body>
+	<!-- for bootstrap working -->
+	<script type="text/javascript" src="{{STATIC_URL}}js/bootstrap-3.1.1.min.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- header modal -->
+	<div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;</button>
+					
+				</div>
+				<div class="modal-body modal-body-sub">
+					<div class="row">
+						<div class="col-md-8 modal_body_left modal_body_left1" style="border-right: 1px dotted #C2C2C2;padding-right:3em;">
+							<div class="sap_tabs">	
+								<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+									<ul>
+										
+										<li class="resp-tab-item" aria-controls="tab_item-1"><span>Mon Compte</span></li>
+									</ul>			 
+									<div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
+										<div class="facts">
+											<div class="register">
+													<form action='{% url 'ModifProfileAcheteur' %}' method="post" role="form">
+												    {% csrf_token %}
+												  
+												<div class="form-group">	
+													<input value=" {{ user.personne.nom}}" name="nom" type="text" required="">
+													</div>	
+													<input value=" {{ user.personne.prenom}}" name="prenom" type="text" required="">
+													<input value=" {{ user.personne.password}}" name="password" type="password" required="">
+													<div class="form-group">
+													<input value=" {{ user.personne.email}}" name="email" type="email" required="">
+													</div>
+													<div class="form-group">
+													<input value=" {{ user.personne.adresse}}" name="adresse" type="text" required="">
+													</div>
+													
+													<div class="sign-up">
+														<input type="submit" value="Modifier"/>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div> 			        					            	      
+								</div>	
+							</div>
+							<script src="{{STATIC_URL}}js/easyResponsiveTabs.js" type="text/javascript"></script>
+							<script type="text/javascript">
+								$(document).ready(function () {
+									$('#horizontalTab').easyResponsiveTabs({
+										type: 'default', //Types: default, vertical, accordion           
+										width: 'auto', //auto or any width like 600px
+										fit: true   // 100% fit in a container
+									});
+								});
+							</script>
+						
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	<!-- header modal -->
+	<!-- header -->
+	<div class="header" id="home1">
+		<div class="container">
+			<div class="w3l_login">
+				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+			</div>
+			<div class="w3l_login">
+				<a href='{% url 'deconnexion' %}'><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a>
+			</div>
+			<div class="w3l_logo">
+				<h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>
+			</div>
+			<div class="search">
+				<input class="search_box" type="checkbox" id="search_box">
+				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
+				<div class="search_form">
+					<form action='{% url 'RechercheArticle' %}' method="post">
+						{% csrf_token %}
+						 
+						<div class="col-md-6">
+						<input type="text" name="categorie" placeholder="Categorie...">
+					</div>
+
+						<input type="submit" value="Send">
+					</form>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- navigation -->
+	<div class="navigation">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header nav_2">
+					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div> 
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav">
+						<li><a href='{% url 'indexV' %}' class="act">Home</a></li>	
+						<!-- Mega Menu -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="row">
+									{%for f in out %}
+									<div class="col-sm-2">
+										<ul class="multi-column-dropdown">
+											<a href='{% url 'categorieBoutique' f %}'><h6>{{f}}</h6></a>
+											{% csrf_token %}
+										</ul>
+									</div>
+									{% endfor %}
+									
+									<div class="clearfix"></div>
+								</div>
+							</ul>
+						</li>
+						<li><a href='{% url 'AddProduct' %}'>Add product</a></li> 
+						<li><a href='{% url 'AllProductV' %}'>All product</a></li>  
+						<li><a href='{% url 'message' %}'>Message</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- //navigation -->
+	<!-- banner -->
+
+	<br>
+	<div class="clearfix"> </div>
+
+	<div class="breadcrumb_dress">
+		<div class="container">
+			<ul>
+				<li><a href='{% url 'AllProductV' %}'><span class="glyphicon glyphicon-home" aria-hidden="true"></span> All product</a> <i>/</i></li>
+				<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> detailProduct <i>/</i></li>
+			</ul>
+		</div>
+	</div>	<!-- //banner --> 
+
+
+	<div class="banner-bottom">
+		<div class="container">
+			{%for f in detail %}
+			<div class="col-md-5 single-left">
+				<div class="flexslider">
+					<ul class="slides">
+						<li data-thumb="{{f.avatar.url}}">
+							<div class="thumb-image"> <img src="{{f.avatar.url}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+						</li>
+						<li data-thumb="{{f.avatar.url}}">
+							 <div class="thumb-image"> <img src="{{f.avatar.url}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+						</li>
+						<li data-thumb="{{f.avatar.url}}">
+						   <div class="thumb-image"> <img src="{{f.avatar.url}}" data-imagezoom="true" class="img-responsive" alt=""> </div>
+						</li> 
+					</ul>
+				</div>
+				<!-- flexslider -->
+					<script defer src="{{STATIC_URL}}js/jquery.flexslider.js"></script>
+					<link rel="stylesheet" href="{{STATIC_URL}}css/flexslider.css" type="text/css" media="screen" />
+					<script>
+					// Can also be used with $(document).ready()
+					$(window).load(function() {
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						controlNav: "thumbnails"
+					  });
+					});
+					</script>
+				<!-- flexslider -->
+				<!-- zooming-effect -->
+					<script src="{{STATIC_URL}}js/imagezoom.js"></script>
+				<!-- //zooming-effect -->
+				<div class="clearfix"> </div>
+				<br>
+				<br>
+				<div>
+					<center>
+					<label for="My rating:">
+					Rating people: {{nbrtt}} persons
+					</label>
+					<br>
+					<div>
+						<input type="number" name="your_awesome_parameter_read_people" id="rating-readonly" class="rating icon-d" data-clearable="remove" value="{{notep}}" data-readonly/>
+					</div>
+					</center>
+				</div>
+				<br>
+
+			</div>
+			<div class="col-md-7 wthree_banner_bottom_right">
+											<div class="register">
+													<form name = "form" enctype = "multipart/form-data" 
+											         action = "{% url 'update_product' %}" method = "POST" >{% csrf_token %}
+											         <div class="form-group">
+											         	<label for="nom">
+															Article:
+														</label>
+															<input type = "text"  id="nom"
+											               value = "{{f.Nom_article}}" name = "Nom_article"  />
+											         </div>
+
+											         <div class="form-group">
+											         	<label for="adresse">
+															Categorie:
+														</label>											       
+											               <input type = "text" id="adresse"
+											               value = "{{f.categorie}}" name = "categorie" />
+											         </div>
+
+											         <div class="form-group">
+											         	<label for="prix">
+															Prix:
+														</label>											       
+											               <input type = "text" id="prix"
+											               value = "{{f.prix}}" name = "prix" />
+											         </div>	
+											         	<label for="Description_Article">
+															Description:
+														</label>
+											         <div class="form-group">
+											               <input type = "text" 
+											               value = "{{f.Description_Article}}" name = "Description_Article" />
+											         </div>
+														
+											         <br>
+											         <input type = "hidden"  
+											               value = "{{f.idarticle}}" name = "idarticle" />
+
+											         <div class="form-group">
+											               <input type = "file" 
+											                  placeholder = "Picture" name = "avatar" />
+											         </div>
+														
+											         <br>
+											         
+											         <div class="sign-up">
+											            
+											               <button style = "border:0px;background-color:#F68300; margin-top:8%; 
+											                  height:35px; width:100%;" type = "submit" value = "Login" >
+											                  <strong>UPDATE PRODUCT</strong>
+											               </button>
+											               
+											         </div>
+											         
+											      </form>
+											</div>
+										
+			</div>
+			{% endfor %}
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- banner-bottom1 -->
+
+	<script src="{{STATIC_URL}}js/jquery.countdown.js"></script>
+	<script src="{{STATIC_URL}}js/script.js"></script>
+
+	
+	
+	<!-- top-brands -->
+	<div class="top-brands">
+		<div class="container">
+			
+			<div class="sliderfig">
+				<ul id="flexiselDemo1">			
+					<li>
+						<img src="{{STATIC_URL}}images/tb1.jpg" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="{{STATIC_URL}}images/tb2.jpg" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="{{STATIC_URL}}images/tb3.jpg" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="{{STATIC_URL}}images/tb4.jpg" alt=" " class="img-responsive" />
+					</li>
+					<li>
+						<img src="{{STATIC_URL}}images/tb5.jpg" alt=" " class="img-responsive" />
+					</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+					$(window).load(function() {
+						$("#flexiselDemo1").flexisel({
+							visibleItems: 4,
+							animationSpeed: 1000,
+							autoPlay: true,
+							autoPlaySpeed: 3000,    		
+							pauseOnHover: true,
+							enableResponsiveBreakpoints: true,
+							responsiveBreakpoints: { 
+								portrait: { 
+									changePoint:480,
+									visibleItems: 1
+								}, 
+								landscape: { 
+									changePoint:640,
+									visibleItems:2
+								},
+								tablet: { 
+									changePoint:768,
+									visibleItems: 3
+								}
+							}
+						});
+						
+					});
+			</script>
+			<script type="text/javascript" src="{{STATIC_URL}}js/jquery.flexisel.js"></script>
+		</div>
+	</div>
+	<!-- //top-brands --> 
+	<!-- newsletter -->
+	<div class="newsletter">
+		<div class="container">
+			<div class="col-md-6 w3agile_newsletter_left">
+				<h3>Newsletter</h3>
+				<p>Excepteur sint occaecat cupidatat non proident, sunt.</p>
+			</div>
+			<div class="col-md-6 w3agile_newsletter_right">
+				<form action="#" method="post">
+					<input type="email" name="Email" placeholder="Email" required="">
+					<input type="submit" value="" />
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //newsletter -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="w3_footer_grids">
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Contact</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+					<ul class="address">
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Information</h3>
+					<ul class="info"> 
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="mail.html">Contact Us</a></li>
+						<li><a href="codes.html">Short Codes</a></li>
+						<li><a href="faq.html">FAQ's</a></li>
+						<li><a href="products.html">Special Products</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Category</h3>
+					<ul class="info"> 
+						<li><a href="products.html">Mobiles</a></li>
+						<li><a href="products1.html">Laptops</a></li>
+						<li><a href="products.html">Purifiers</a></li>
+						<li><a href="products1.html">Wearables</a></li>
+						<li><a href="products2.html">Kitchen</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Profile</h3>
+					<ul class="info"> 
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Today's Deals</a></li>
+					</ul>
+					<h4>Follow Us</h4>
+					<div class="agileits_social_button">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="google"> </a></li>
+							<li><a href="#" class="pinterest"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="footer-copy">
+			<div class="footer-copy1">
+				<div class="footer-copy-pos">
+					<a href="#home1" class="scroll"><img src="images/arrow.png" alt=" " class="img-responsive" /></a>
+				</div>
+			</div>
+			<div class="container">
+				<p>&copy; 2017 Electronic Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer --> 
+	<!-- cart-js -->
+	<script src="{js/minicart.js"></script>
+	<script>
+        w3ls.render();
+
+        w3ls.cart.on('w3sb_checkout', function (evt) {
+        	var items, len, i;
+
+        	if (this.subtotal() > 0) {
+        		items = this.items();
+
+        		for (i = 0, len = items.length; i < len; i++) { 
+        		}
+        	}
+        });
+    </script>  
+	<!-- //cart-js -->   
+</body>
+</html>
